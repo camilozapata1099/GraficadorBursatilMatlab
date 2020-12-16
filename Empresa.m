@@ -7,7 +7,6 @@ classdef Empresa <handle
         maximo=zeros(300,1);
         apertura=zeros(300,1);
         fecha=zeros(300,1);
-        rsi=zeros(300,1);
         macdR=zeros(300,1);
         macdL=zeros(300,1);
         estocasticoR=zeros(300,1);
@@ -40,9 +39,6 @@ classdef Empresa <handle
             obj.sma20=calcularSma20(obj.cierre);
             [obj.macdR, obj.macdL] =calcularMacd(obj.cierre);
             [obj.estocasticoR, obj.estocasticoL] =calcularEstocastico(obj.cierre, obj.maximo, obj.minimo);
-        end
-        function hola(obj)
-            obj.nombreEmpresa="Hola";
         end
     end
     
